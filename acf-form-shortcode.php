@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       ACF Form Shortcode
  * Plugin URI:        https://tigerton.se
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Creates a shortcode for the acf_form() function to be used in the content editor
  * Version:           1.0.0
  * Author:            Jonathan de Jong
  * Author URI:        https://github.com/jonathan-dejong
