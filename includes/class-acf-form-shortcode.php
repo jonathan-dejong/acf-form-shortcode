@@ -151,9 +151,6 @@ class Acf_Form_Shortcode {
 
 		$plugin_admin = new Acf_Form_Shortcode_Admin( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-
 		//Adds our shortcode
 		add_shortcode( 'show_acf_form' , array($plugin_admin, 'show_acf_form') );
 
@@ -170,8 +167,6 @@ class Acf_Form_Shortcode {
 
 		$plugin_public = new Acf_Form_Shortcode_Public( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 		$this->loader->add_filter( 'acf/update_value', $plugin_public, 'acf_kses_post', 10, 1);
 		$this->loader->add_action( 'wp', $plugin_public, 'enqueue_acf_form', 15 );
 
